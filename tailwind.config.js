@@ -3,21 +3,15 @@ module.exports = {
   darkMode: "class", // or 'media' or 'class'
   theme: {
     fontFamily: {
-      sans: [
-        "IBM Plex Sans",
-        "-apple-system",
-        "BlinkMacSystemFont",
-        "Segoe UI",
-        "Roboto",
-        "Helvetica Neue",
-        "Arial",
-        "sans-serif",
-        "Apple Color Emoji",
-        "Segoe UI Emoji",
-        "Segoe UI Symbol",
-      ],
+      sans: ["Roboto"],
     },
     extend: {
+      colors: {
+        gray: {
+          800: "#1e1e1e",
+          900: "#121212",
+        },
+      },
       fontSize: {
         "10xl": [
           "10rem",

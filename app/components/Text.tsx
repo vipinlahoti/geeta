@@ -10,9 +10,7 @@ export function Text({ variant, children }: TextType) {
 
   if (variant === "h1") {
     return (
-      <h1
-        className={`text-8xl tracking-normal font-semibold mb-10 ${fontStyle}`}
-      >
+      <h1 className={`text-8xl tracking-normal font-medium mb-10 ${fontStyle}`}>
         {children}
       </h1>
     );
@@ -48,7 +46,7 @@ export function Text({ variant, children }: TextType) {
     );
   } else if (variant === "lead") {
     return (
-      <p className="text-xl font-medium mb-4 text-gray-700 dark:text-gray-300">
+      <p className="text-xl font-normal mb-4 text-gray-700 dark:text-gray-300">
         {children}
       </p>
     );

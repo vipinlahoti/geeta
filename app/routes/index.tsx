@@ -1,5 +1,5 @@
 import type { MetaFunction } from "@remix-run/cloudflare";
-import { HeroJumbotron, Text } from "~/components";
+import { HeroJumbotron } from "~/components";
 
 export const meta: MetaFunction = () => ({
   title: "Home title",
@@ -9,7 +9,7 @@ export const meta: MetaFunction = () => ({
 export default function Index() {
   return (
     <HeroJumbotron
-      title="Welcome to Skawe.js"
+      title="Coming soon"
       description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     />
   );

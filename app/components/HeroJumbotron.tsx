@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { Container, Text } from "~/components";
+import { Text } from "~/components";
 
 type HeroJumbotronType = {
   title?: any;
@@ -19,7 +19,7 @@ export function HeroJumbotron({
   rightContent,
 }: HeroJumbotronType) {
   return (
-    <Container spacing="top-large bottom-large" column={2}>
+    <div className="grid grid-cols-1 gap-x-8 lg:grid-cols-2 sm:grid-cols-1">
       <div className="my-auto">
         <div className="mb-2">
           {eyebrow ? <Text variant="h6">{eyebrow}</Text> : null}
@@ -30,6 +30,6 @@ export function HeroJumbotron({
         </div>
       </div>
       <div className="relative">{rightContent}</div>
-    </Container>
+    </div>
   );
 }

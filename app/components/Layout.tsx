@@ -1,14 +1,15 @@
 import type { ReactNode } from "react";
-import { Container } from "~/components";
+import { Container, Header } from "~/components";
 
 type LayoutType = {
   children: ReactNode;
 };
 
-export function Layout({ children }: LayoutType) {
-  return (
+export const Layout = ({ children }: LayoutType) => (
+  <>
+    <Header />
     <main id="main" role="main">
-      <Container spacing="top-medium bottom-medium">{children}</Container>
+      <Container spacing="top-large bottom-large">{children}</Container>
     </main>
-  );
-}
+  </>
+);

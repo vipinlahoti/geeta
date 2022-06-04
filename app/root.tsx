@@ -28,7 +28,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="bg-white dark:bg-black">
+      <body className="bg-white dark:bg-gray-900">
         <Layout>
           <Outlet />
         </Layout>

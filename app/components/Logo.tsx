@@ -8,7 +8,7 @@ export function Logo() {
     <Link
       to="/"
       aria-label="Go to home page"
-      className="relative text-3xl font-medium font-serif tracking-tighter text-black dark:text-white"
+      className="text-xl font-medium font-serif tracking-wide text-black dark:text-white"
     >
       {siteTitle}
     </Link>
