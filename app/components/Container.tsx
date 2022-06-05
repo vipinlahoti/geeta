@@ -3,12 +3,14 @@ import type { ReactNode } from "react";
 type ContainerType = {
   spacing?: string;
   column?: number;
+  className?: string;
   children: ReactNode;
 };
 
 export function Container({
   spacing = "",
   column = 1,
+  className = "",
   children,
 }: ContainerType) {
   let topSpacing = "";
@@ -50,7 +52,7 @@ export function Container({
 
   return (
     <div
-      className={`container mx-auto px-8 grid grid-cols-1 gap-x-8  ${topSpacing} ${bottomSpacing} ${
+      className={`container mx-auto grid grid-cols-1 gap-x-8 ${className} ${topSpacing} ${bottomSpacing} ${
         column === 2 ? "lg:grid-cols-2 sm:grid-cols-1" : ""
       } ${column === 3 ? "lg:grid-cols-3 sm:grid-cols-1" : ""} ${
         column === 4 ? "lg:grid-cols-4 sm:grid-cols-1" : ""

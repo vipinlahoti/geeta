@@ -3,7 +3,7 @@ interface ObjectType {
 }
 
 const appSettings: ObjectType = {
-  title: "Bhagavad Gītā",
+  title: "Bhagavad Gītā.",
   logoUrlLight: "",
   logoUrlDark: "",
   faviconUrl: "/images/wired-lynk-logo.png",

@@ -1,10 +1,10 @@
 module.exports = {
   content: ["./app/**/*.{js,ts,jsx,tsx}"],
-  darkMode: "class", // or 'media' or 'class'
+  darkMode: "media", // or 'media' or 'class'
   theme: {
-    fontFamily: {
-      sans: ["Roboto"],
-    },
+    // fontFamily: {
+    //   sans: ["Roboto"],
+    // },
     extend: {
       colors: {
         gray: {

@@ -1,13 +1,12 @@
 import type { ReactNode } from "react";
-import { Text } from "~/components";
+import { Container, Text } from "~/components";
 
 type HeroJumbotronType = {
   title?: any;
   heading?: any;
   description?: any;
   eyebrow?: any;
-  leftContent?: ReactNode;
-  rightContent?: ReactNode;
+  content?: ReactNode;
 };
 
 export function HeroJumbotron({
@@ -15,21 +14,17 @@ export function HeroJumbotron({
   heading,
   description,
   eyebrow,
-  leftContent,
-  rightContent,
+  content,
 }: HeroJumbotronType) {
   return (
-    <div className="grid grid-cols-1 gap-x-8 lg:grid-cols-2 sm:grid-cols-1">
-      <div className="my-auto">
-        <div className="mb-2">
-          {eyebrow ? <Text variant="h6">{eyebrow}</Text> : null}
-          {title ? <Text variant="h1">{title}</Text> : null}
-          {heading ? <Text variant="h2">{heading}</Text> : null}
-          {description ? <Text variant="lead">{description}</Text> : null}
-          {leftContent}
-        </div>
+    <Container spacing="top-small bottom-medium">
+      <div className="mb-2">
+        {eyebrow ? <Text variant="h6">{eyebrow}</Text> : null}
+        {title ? <Text variant="h1">{title}</Text> : null}
+        {heading ? <Text variant="h2">{heading}</Text> : null}
+        {description ? <Text variant="lead">{description}</Text> : null}
+        {content}
       </div>
-      <div className="relative">{rightContent}</div>
-    </div>
+    </Container>
   );
 }

@@ -45,14 +45,10 @@ export function Text({ variant, children }: TextType) {
       </h6>
     );
   } else if (variant === "lead") {
-    return (
-      <p className="text-xl font-normal mb-4 text-gray-700 dark:text-gray-300">
-        {children}
-      </p>
-    );
+    return <p className={`text-xl font-light mb-4 ${fontStyle}`}>{children}</p>;
   } else {
     return (
-      <p className="text-base font-normal leading-normal mb-4 text-gray-700 dark:text-gray-200">
+      <p className="text-base font-normal leading-normal mb-2 text-gray-700 dark:text-gray-200">
         {children}
       </p>
     );
