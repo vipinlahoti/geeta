@@ -8,22 +8,22 @@ type LayoutType = {
 const CHAPTERS = [
   {
     chapter: 1,
-    title: "Tempor incididunt ut labore",
+    title: "Viśāda yoga",
     verses: 46,
   },
   {
     chapter: 2,
-    title: "Quis nostrud exercitation ullamco",
+    title: "Sāńkhya yoga",
     verses: 18,
   },
   {
     chapter: 3,
-    title: "Excepteur sint occaecat",
+    title: "Karma yoga",
     verses: 16,
   },
   {
     chapter: 4,
-    title: "Sunt in culpa qui officia deserunt mollit",
+    title: "Jñāna yoga",
     verses: 16,
   },
 ];
@@ -31,7 +31,7 @@ const CHAPTERS = [
 export const Layout = ({ children }: LayoutType) => (
   <>
     <Header />
-    <Container className="px-8" spacing="bottom-large">
+    <Container className="px-8" spacing="top-medium bottom-large">
       <div className="lg:flex">
         <Sidebar chapters={CHAPTERS} />
         <main

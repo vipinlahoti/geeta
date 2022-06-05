@@ -1,7 +1,7 @@
 import { Container, Logo, Button } from "~/components";
 
 export const Header = () => (
-  <header className="h-16 bg-gray-50 dark:bg-gray-800">
+  <header className="h-16 bg-gray-50 dark:bg-gray-800 w-full fixed z-30 top-0">
     <nav role="navigation" className="py-3">
       <Container className="px-8">
         <div className="flex justify-between items-center">

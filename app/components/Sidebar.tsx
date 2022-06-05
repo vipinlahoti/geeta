@@ -15,7 +15,7 @@ export const Sidebar = ({ chapters }: SidebarType) => (
     id="sidebar"
     className="flex-none w-80 h-full lg:overflow-y-visible lg:block hidden py-10 pr-8 mr-8"
   >
-    <ul className="relative z-10">
+    <ul className="fixed w-80 z-10">
       <li className="uppercase text-xs font-bold mb-2 text-gray-500 dark:text-gray-400">
         Chapters
       </li>

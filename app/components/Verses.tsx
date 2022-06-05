@@ -8,15 +8,19 @@ type VersesType = {
 
 export const Verses = ({ chapter, description, verse }: VersesType) => (
   <div className="border-b border-gray-100 dark:border-gray-800 py-10">
-    <div className="flex">
-      <div className="w-20">
-        <Text>
-          {chapter}:{verse}
-        </Text>
-      </div>
-      <div className="w-11/12">
-        <Text variant="lead">{description}</Text>
-      </div>
+    <div className="text-center">
+      <Text>
+        {chapter}:{verse}
+      </Text>
+      <Text variant="lead">
+        धृतराष्ट्र उवाच |<br /> धर्मक्षेत्रे कुरुक्षेत्रे समवेता युयुत्सवः |
+        <br /> मामकाः पाण्डवाश्चैव किमकुर्वत सञ्जय ||1||
+      </Text>
+      <Text variant="lead">
+        dhṛitarāśhtra uvācha <br />
+        dharma-kṣhetre kuru-kṣhetre samavetā yuyutsavaḥ <br />
+        māmakāḥ pāṇḍavāśhchaiva kimakurvata sañjaya <br />
+      </Text>
     </div>
   </div>
 );
