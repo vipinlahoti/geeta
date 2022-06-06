@@ -1,4 +1,5 @@
-import { Button, ModalTrigger, Logo, Menu } from "~/components";
+import { Button, ModalTrigger, Menu } from "~/components";
+import chapters from "~/chapters";
 
 const MenuButton = () => (
   <Button variant="flat" size="small">
@@ -19,31 +20,8 @@ const MenuButton = () => (
   </Button>
 );
 
-const CHAPTERS = [
-  {
-    chapter: 1,
-    title: "Viśāda yoga",
-    verses: 46,
-  },
-  {
-    chapter: 2,
-    title: "Sāńkhya yoga",
-    verses: 18,
-  },
-  {
-    chapter: 3,
-    title: "Karma yoga",
-    verses: 16,
-  },
-  {
-    chapter: 4,
-    title: "Jñāna yoga",
-    verses: 16,
-  },
-];
-
 export const MobileMenu = () => (
-  <ModalTrigger title={<Logo />} trigger={<MenuButton />}>
-    <Menu chapters={CHAPTERS} />
+  <ModalTrigger title={"Chapters"} trigger={<MenuButton />}>
+    <Menu chapters={chapters} />
   </ModalTrigger>
 );

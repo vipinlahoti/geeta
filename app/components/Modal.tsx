@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { Text } from "~/components";
+import { Text, Button } from "~/components";
 
 type ModalType = {
   children: ReactNode;
@@ -9,10 +9,7 @@ type ModalType = {
 };
 
 const CloseButton = ({ onHide }: any) => (
-  <button
-    className="rounded-md text-gray-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
-    onClick={onHide}
-  >
+  <Button variant="flat" size="small" onClick={onHide}>
     <span className="sr-only">Close panel</span>
     <svg
       className="h-6 w-6"
@@ -29,14 +26,14 @@ const CloseButton = ({ onHide }: any) => (
         d="M6 18L18 6M6 6l12 12"
       />
     </svg>
-  </button>
+  </Button>
 );
 
 export const Modal = ({ children, show = false, onHide, title }: ModalType) => {
   let headerComponent;
   if (title) {
     headerComponent = (
-      <div className="h-16 flex justify-between items-center content-center py-3 px-8 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
+      <div className="w-full fixed z-30 h-16 flex justify-between items-center content-center py-3 px-8 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
         <Text variant="h6" className="font-serif" noGutter>
           {title}
         </Text>
@@ -69,7 +66,7 @@ export const Modal = ({ children, show = false, onHide, title }: ModalType) => {
               <div className="relative w-screen max-w-lg">
                 <div className="h-full flex flex-col bg-white dark:bg-gray-900 shadow-xl overflow-y-scroll">
                   {headerComponent}
-                  <div className="relative p-8 flex-1">{children}</div>
+                  <div className="relative px-8 py-20 flex-1">{children}</div>
                 </div>
               </div>
             </div>
