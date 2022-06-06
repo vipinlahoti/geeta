@@ -56,20 +56,23 @@ const sizeClass = (size: string) => {
 const FlatButton = ({
   path,
   size = "",
+  className = "",
   children,
   ...rest
 }: ButtonLinkSizeInterface) => {
-  const className = `${defaultClass} ${sizeClass(size)} ${flatButtonClass()}`;
+  const flatClassName = `${defaultClass} ${sizeClass(
+    size
+  )} ${flatButtonClass()} ${className}`;
 
   if (path) {
     return (
-      <Link to={path} className={className} {...rest}>
+      <Link to={path} className={flatClassName} {...rest}>
         {children}
       </Link>
     );
   } else {
     return (
-      <button className={className} {...rest}>
+      <button className={flatClassName} {...rest}>
         {children}
       </button>
     );
