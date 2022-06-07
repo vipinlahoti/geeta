@@ -85,6 +85,26 @@ export const Text = ({
         {children}
       </p>
     );
+  } else if (variant === "small") {
+    return (
+      <p
+        className={`text-sm font-light ${fontStyle} ${
+          noGutter ? "" : "mb-2"
+        } ${className}`}
+      >
+        {children}
+      </p>
+    );
+  } else if (variant === "eyebrow") {
+    return (
+      <div
+        className={`uppercase tracking-wide	text-sm font-bold ${fontStyle} ${
+          noGutter ? "" : "mb-4"
+        } ${className}`}
+      >
+        {children}
+      </div>
+    );
   } else {
     return (
       <p

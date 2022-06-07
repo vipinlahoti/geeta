@@ -13,9 +13,11 @@ export const Layout = ({ children }: LayoutType) => (
       <div className="md:flex">
         <aside
           id="sidebar"
-          className="flex-none lg:w-80 w-60 md:block hidden py-10 pr-8 mr-8 border-r border-gray-100 dark:border-gray-800"
+          className="flex-none lg:w-80 w-60 md:block hidden -ml-4 mr-8"
         >
-          <Menu chapters={chapters} className="fixed pr-8 lg:w-80 w-60" />
+          <div className="fixed z-10 h-full overflow-y-auto pt-10 pb-14 pr-8 lg:w-80 w-60 border-r border-gray-100 dark:border-gray-800">
+            <Menu chapters={chapters} />
+          </div>
         </aside>
         <main
           id="main"

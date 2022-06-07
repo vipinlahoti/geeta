@@ -1,7 +1,7 @@
 import { Container, Logo, Settings, MobileMenu } from "~/components";
 
 export const Header = () => (
-  <header className="h-16 dark:bg-gray-900 w-full fixed z-10 top-0 border-b border-gray-100 dark:border-gray-800">
+  <header className="h-16 bg-white/80 dark:bg-gray-900/80 w-full fixed z-30 top-0 border-b border-gray-100 dark:border-gray-800 backdrop-blur-sm">
     <nav role="navigation" className="py-3">
       <Container className="px-8">
         <div className="flex justify-between items-center">

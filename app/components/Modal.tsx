@@ -33,7 +33,7 @@ export const Modal = ({ children, show = false, onHide, title }: ModalType) => {
   let headerComponent;
   if (title) {
     headerComponent = (
-      <div className="w-full fixed z-30 h-16 flex justify-between items-center content-center py-3 px-8 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
+      <div className="w-full fixed z-30 h-16 flex justify-between items-center content-center py-3 px-8 bg-white/80 dark:bg-gray-900/80 border-b border-gray-200 dark:border-gray-800 backdrop-blur-sm md:rounded-t-2xl">
         <Text variant="h6" className="font-serif" noGutter>
           {title}
         </Text>
@@ -59,12 +59,12 @@ export const Modal = ({ children, show = false, onHide, title }: ModalType) => {
         >
           <div className="absolute inset-0 overflow-hidden">
             <div
-              className="absolute inset-0 bg-gray-900 bg-opacity-75 transition-opacity"
+              className="absolute inset-0 bg-gray-900/60 dark:bg-gray-800/60 transition-opacity"
               aria-hidden="true"
             ></div>
             <div className="absolute inset-y-0 right-0 max-w-full flex transform transition-all">
-              <div className="relative w-screen max-w-lg">
-                <div className="h-full flex flex-col bg-white dark:bg-gray-900 shadow-xl overflow-y-scroll">
+              <div className="relative w-screen max-w-md">
+                <div className="h-full flex flex-col bg-white dark:bg-gray-900 shadow-xl overflow-y-scroll md:rounded-2xl">
                   {headerComponent}
                   <div className="relative px-8 py-20 flex-1">{children}</div>
                 </div>

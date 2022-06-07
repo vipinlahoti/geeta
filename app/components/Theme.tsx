@@ -2,8 +2,8 @@ import { Text, Button } from "~/components";
 
 export const Theme = () => (
   <div>
-    <Text variant="lead">Theme</Text>
-    <div className="flex p-2 rounded-xl space-x-2 mb-6 bg-gray-100 dark:bg-gray-800">
+    <Text variant="eyebrow">Theme</Text>
+    <div className="flex p-1 rounded-xl space-x-2 mb-6 bg-gray-100 dark:bg-gray-800">
       <Button
         variant="flat"
         size="small"
@@ -62,8 +62,5 @@ export const Theme = () => (
         Dark
       </Button>
     </div>
-    <Text>
-      The system theme automatically adopts to your light/dark mode settings
-    </Text>
   </div>
 );
